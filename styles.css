@@ -1,0 +1,68 @@
+body {
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.game-area {
+  padding: 2px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: fit-content;
+  box-shadow: 2px 4px 30px 6px gray;
+  background-color: green;
+  color: whitesmoke;
+}
+
+.game {
+  background-color: whitesmoke;
+  width: fit-content;
+}
+
+.btn {
+  padding: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: green;
+}
+
+.page {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.pop {
+  border: 1px solid green;
+  width: 85px;
+  height: 85px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: black;
+  font-size: 30px;
+}
+.row {
+  display: block;
+}
+
+.active {
+  box-shadow: inset 1px 0px 8px 2px black;
+  background-color: white;
+  cursor: pointer;
+}
+.stats {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 5px;
+}

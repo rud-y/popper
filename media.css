@@ -1,0 +1,45 @@
+@media (max-width: 500px) {
+  .pop {
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 20px;
+  }
+  .pop {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 370px) {
+  body {
+    font-size: 18px;
+  }
+  .pop {
+    width: 52px;
+    height: 52px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 317px) {
+  .pop {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 265px) {
+  .pop {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
