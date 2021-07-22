@@ -1,36 +1,43 @@
+:root {
+ --the-green: rgb(7, 102, 7);
+}
 body {
   font-size: 25px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .game-area {
-  padding: 2px;
+  padding-bottom: 20px;
   margin: 0 auto;
-  margin-top: 50px;
-  width: fit-content;
+  max-width: 700px;
   box-shadow: 2px 4px 30px 6px gray;
-  background-color: green;
+  background-color: var(--the-green);
   color: whitesmoke;
+  border-radius: 4px;
 }
 
 .game {
   background-color: whitesmoke;
   width: fit-content;
+  border: solid 2px black;
 }
 
 .btn {
-  padding: 4px;
+  padding: 6px;
   cursor: pointer;
   font-size: 20px;
+  font-weight: bold;
   background-color: black;
-  color: white;
-  border: 1px solid white;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
   display: block;
   margin: auto;
   margin-bottom: 20px;
 }
 
 .btn:hover {
-  background-color: green;
+  background-color: whitesmoke;
+  color: black;
+  font-weight: bold;
 }
 
 .page {
@@ -42,7 +49,7 @@ body {
 }
 
 .pop {
-  border: 1px solid green;
+  border: 1px solid var(--the-green);
   width: 85px;
   height: 85px;
   display: inline-block;

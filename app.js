@@ -69,9 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   playArea.page = Array.from(document.querySelectorAll(".page"));
 
-  ///
+  /// Stats for scores and lives
   player.score = 0;
   player.lives = 3;
+  player.previousScore = 0;
+  player.scoresArray = [];
+  let theBest = 0;
+  player.bestScore = 0;
 
   // EventListener for buttons
   playArea.btns.forEach((item) => {
@@ -89,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function buildBoard() {
     playArea.scorer = document.createElement("span");
     playArea.scorer.innerHTML =
-      "Hit the popping squares to earn points. If you skip any square with negative value more than three times... the game is over. Collect as much points as you can. Good luck! <hr> <b>⬇ Press to Start! ⬇</b>";
+      "Hit the popping squares to earn points. If you skip any square with negative value more than three times... the game is over. Collect as much points as you can. Good luck! <hr> <b>⬇ Start! ⬇</b>";
     playArea.stats.appendChild(playArea.scorer);
 
     let rows = 5;
@@ -122,10 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  //StartGame >> startPop() & updateScore
+  //Starting the Game >> startPop() & updateScore
   function startGame() {
     player.score = 0;
-    player.lives = 4;
+    player.lives = 3;
     playArea.main.classList.remove("visible");
     playArea.game.classList.add("visible");
     //player gameOver set to false
@@ -183,12 +187,14 @@ document.addEventListener("DOMContentLoaded", () => {
   //Score update ----
   function updateScore() {
     playArea.scorer.innerHTML =
-      "Score: <b>" +
-      player.score +
-      "</b> / </br>" +
-      "Lives remaining: <b>" +
+      "Lives: " +
       player.lives +
-      "</b><br>";
+      "<br/>Score: <b>" +
+      player.score +
+      "</b></b><br/><br/> Previous: " +
+      player.previousScore +
+      "<br/>Your best: " +
+      player.bestScore;
   }
 
   //GameOver ----
@@ -197,6 +203,14 @@ document.addEventListener("DOMContentLoaded", () => {
     playArea.main.classList.add("visible");
     playArea.game.classList.remove("visible");
     document.querySelector(".new-game").innerHTML = "Play again?";
+    player.previousScore = player.score;
+    player.scoresArray.push(player.previousScore);
+    // ----
+    let scoresArraySorted = player.scoresArray.sort(function compare(x, y) {
+      return x - y;
+    });
+    theBest = scoresArraySorted[scoresArraySorted.length - 1];
+    player.bestScore = theBest;
   }
 
   function hitPop(e) {
