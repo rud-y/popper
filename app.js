@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         icon: "\u0026#10036;",
-        value: 50,
+        value: 40,
       },
       {
         icon: "\u0026#10042;",
-        value: 70,
+        value: 100,
       },
       {
         icon: "\u0026#10084;",
@@ -38,19 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         icon: "\u0026#9971;",
-        value: 85,
+        value: 200,
       },
       {
         icon: "\u0026#9729;",
-        value: -50,
+        value: -25,
       },
       {
         icon: "\u0026#9785;",
-        value: -100,
+        value: -90,
       },
       {
         icon: "\u0026#9760;",
-        value: -190,
+        value: -150,
       },
       {
         icon: "\u0026#9791;",
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let newPop = randomUp();
     newPop.classList.add("active");
     newPop.addEventListener("click", hitPop);
-    const time = Math.floor(Math.random() * 500 + 500);
+    const time = Math.floor(Math.random() * 400 + 450);
     const val = Math.floor(Math.random() * gameObj.data.length);
 
     newPop.old = newPop.innerText;
